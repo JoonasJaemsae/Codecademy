@@ -30,6 +30,7 @@ namespace Review
             double AgeInDogYears = Math.Floor(userAge / YearInDogYears);
 
             Console.WriteLine(AgeInDogYears);
+            Console.ReadLine();
         }
     }
 }
