@@ -6,6 +6,18 @@ class Box():
     def weight(self):
         """Docstring for the 'weight' property"""
         return self.__weight
+    
+    @weight.setter
+    def weight(self, weight):
+        if weight >= 0:
+            self.__weight = weight
 
+# Testing getter
 box = Box(5)
+print(box.weight)
+
+# Testing setter
+box.weight = -1
+print(box.weight)
+box.weight = 6
 print(box.weight)
