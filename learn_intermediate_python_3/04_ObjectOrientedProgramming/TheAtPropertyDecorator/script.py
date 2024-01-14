@@ -26,6 +26,6 @@ print(box.weight)
 box.weight = 6
 print(box.weight)
 
-# Testing deleter.
-del box.weight
-print(box.weight)
+# Testing deleter. Results in AttributeError.
+# del box.weight
+# print(box.weight)
