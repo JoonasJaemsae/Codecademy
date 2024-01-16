@@ -1,6 +1,6 @@
 import database
 
-instrument = 'Synthesizer'
+instrument = 'Didgeridoo'
 database.connect_to_database()
 
 try:
