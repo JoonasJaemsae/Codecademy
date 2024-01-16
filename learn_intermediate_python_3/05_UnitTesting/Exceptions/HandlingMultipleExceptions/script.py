@@ -10,6 +10,7 @@ def display_discounted_price(instrument, discount):
   discounted_price = full_price - (full_price * discount_percentage)
   print("The instrument's discounted price is: " + str(discounted_price))
 
+# Edit the two rows below to test exception handling
 instrument = 'Clarinet'
 discount = '20'
 
