@@ -13,5 +13,6 @@ def display_rewards_account(customer):
   else:
     print('Rewards account number is: ' + str(rewards_number))
 
+# Change customer to 'Mario' to test the else clause
 customer = 'Zuigly'
 display_rewards_account(customer)
