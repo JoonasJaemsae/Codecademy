@@ -13,6 +13,12 @@ class EntertainmentSystemTests(unittest.TestCase):
     self.assertTrue(wifi_enabled)
 
   # Write your code below:
-  
+  def test_maximum_display_brightness(self):
+    brightness = entertainment.get_maximum_display_brightness()
+    self.assertAlmostEqual(brightness, 400)
 
+  def test_device_temperature(self):
+    device_temp = entertainment.get_device_temp()
+    self.assertLess(device_temp, 35)
+  
 unittest.main()
