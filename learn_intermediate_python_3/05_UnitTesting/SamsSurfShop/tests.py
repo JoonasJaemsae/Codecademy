@@ -10,5 +10,8 @@ class TestSurfshop(unittest.TestCase):
 
     def test_add_surfboards(self):
       self.assertEqual(self.cart.add_surfboards(1), 'Successfully added 1 surfboard to cart!')
+    
+    def test_add_surfboards_2(self):
+      self.assertEqual(self.cart.add_surfboards(2), 'Successfully added 2 surfboards to cart!')
 
 unittest.main()
