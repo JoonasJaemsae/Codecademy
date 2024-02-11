@@ -8,10 +8,11 @@ class TestSurfshop(unittest.TestCase):
       self.cart = surfshop.ShoppingCart()
 
     def test_add_surfboards(self):
-      self.assertEqual(self.cart.add_surfboards(1), 'Successfully added 1 surfboard to cart!')
-
-    def test_add_surfboards_2(self):
-      self.assertEqual(self.cart.add_surfboards(2), 'Successfully added 2 surfboards to cart!')
+      for i in range(2, 5):
+        with self.subTest("value: ", i=i):
+          self.assertEqual(self.cart.add_surfboards(i), f'Successfully added {i} surfboards to cart!')
+        # Initialize shopping cart after every iteration to reset surfboard amount to 0.
+        self.cart = surfshop.ShoppingCart()
 
     @unittest.skip("Off-season. No need to limit boards.")
     def test_add_surfboards_5(self):
