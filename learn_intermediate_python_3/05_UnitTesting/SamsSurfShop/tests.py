@@ -14,7 +14,7 @@ class TestSurfshop(unittest.TestCase):
         # Initialize shopping cart after every iteration to reset surfboard amount to 0.
         self.cart = surfshop.ShoppingCart()
 
-    @unittest.skip("Off-season. No need to limit boards.")
+    # @unittest.skip("Off-season. No need to limit boards.")
     def test_add_surfboards_5(self):
       self.assertRaises(surfshop.TooManyBoardsError, self.cart.add_surfboards, 5)
 
@@ -22,5 +22,17 @@ class TestSurfshop(unittest.TestCase):
     def test_apply_locals_discount(self):
       self.cart.apply_locals_discount()
       self.assertTrue(self.cart.locals_discount, True)
+      
+    def test_TooManyBoardsError_message(self):
+      expected_message = 'Cart cannot have more than 4 surfboards in it!'
+      with self.assertRaises(surfshop.TooManyBoardsError) as context:
+        raise surfshop.TooManyBoardsError
+      self.assertEqual(str(context.exception), expected_message)
+    
+    def test_TooManyBoardsError_message(self):
+      expected_message = 'Cart cannot have more than 4 surfboards in it!'
+      with self.assertRaises(surfshop.TooManyBoardsError) as context:
+        raise surfshop.TooManyBoardsError
+      self.assertEqual(str(context.exception), expected_message)
       
 unittest.main()

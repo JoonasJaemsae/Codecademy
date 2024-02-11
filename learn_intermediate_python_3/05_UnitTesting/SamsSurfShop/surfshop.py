@@ -1,7 +1,11 @@
 import datetime
 
 class TooManyBoardsError(Exception):
-    pass
+    def __init__(self):
+      self.limit = 4
+
+    def __str__(self):
+      return f'Cart cannot have more than {self.limit} surfboards in it!'
 
 class CheckoutDateError(Exception):
     pass
