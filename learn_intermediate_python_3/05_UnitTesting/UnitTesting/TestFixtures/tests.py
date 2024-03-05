@@ -21,5 +21,4 @@ class CheckInKioskTests(unittest.TestCase):
   def setUp(self):
     kiosk.return_to_welcome_page()
 
-
 unittest.main()
