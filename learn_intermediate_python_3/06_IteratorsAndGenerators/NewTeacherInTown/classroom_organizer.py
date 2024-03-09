@@ -6,6 +6,18 @@ class ClassroomOrganizer:
   def __init__(self):
     self.sorted_names = self._sort_alphabetically(student_roster)
 
+  def __iter__(self):
+    self.index = 0
+    return self
+
+  def __next__(self):
+    if self.index < len(self.sorted_names):
+      next_name = self.sorted_names[self.index]
+      self.index += 1
+      return next_name
+    else:
+      raise StopIteration
+
   def _sort_alphabetically(self,students):
     names = []
     for student_info in students:
