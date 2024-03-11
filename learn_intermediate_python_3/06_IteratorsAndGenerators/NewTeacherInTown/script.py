@@ -18,3 +18,8 @@ for student in students:
 combos = students.get_combinations_of_2()
 for combo in combos:
   print(combo)
+
+# Task 5
+math_students = students.get_students_with_subject("Math")
+for mather in math_students:
+  print(mather)
