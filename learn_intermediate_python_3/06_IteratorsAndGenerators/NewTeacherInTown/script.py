@@ -1,5 +1,6 @@
 from roster import student_roster
 from classroom_organizer import ClassroomOrganizer
+import itertools
 
 # Task 1
 # student_roster_iterator = iter(student_roster)
@@ -28,3 +29,6 @@ for mather in math_students:
 science_students = students.get_students_with_subject("Science")
 for scientist in science_students:
   print(scientist)
+
+# Combine the two iterables
+combined_list = itertools.chain(math_students, science_students)
