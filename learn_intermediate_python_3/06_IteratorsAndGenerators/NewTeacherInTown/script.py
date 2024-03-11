@@ -20,6 +20,11 @@ for combo in combos:
   print(combo)
 
 # Task 5
+# Retrieve math and science students
 math_students = students.get_students_with_subject("Math")
 for mather in math_students:
   print(mather)
+
+science_students = students.get_students_with_subject("Science")
+for scientist in science_students:
+  print(scientist)
