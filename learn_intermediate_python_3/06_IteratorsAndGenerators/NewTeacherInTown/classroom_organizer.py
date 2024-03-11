@@ -17,6 +17,10 @@ class ClassroomOrganizer:
       return next_name
     else:
       raise StopIteration
+    
+  def get_combinations_of_2(self):
+    student_combos = itertools.combinations(self.sorted_names, 2)
+    return student_combos
 
   def _sort_alphabetically(self,students):
     names = []

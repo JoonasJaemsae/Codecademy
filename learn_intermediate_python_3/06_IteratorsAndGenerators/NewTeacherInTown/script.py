@@ -13,3 +13,8 @@ from classroom_organizer import ClassroomOrganizer
 students = ClassroomOrganizer()
 for student in students:
   print(student)
+
+# Task 4
+combos = students.get_combinations_of_2()
+for combo in combos:
+  print(combo)
