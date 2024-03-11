@@ -32,3 +32,8 @@ for scientist in science_students:
 
 # Combine the two iterables
 combined_list = itertools.chain(math_students, science_students)
+
+# Print out all the 4-student combos
+combos = itertools.combinations(combined_list, 4)
+for pair in combos:
+  print(pair)
