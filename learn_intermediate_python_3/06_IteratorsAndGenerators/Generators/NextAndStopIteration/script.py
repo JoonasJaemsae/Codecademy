@@ -6,3 +6,9 @@ def student_standing_generator():
     if standing == 'Freshman':
       yield 500
   
+standing_values = student_standing_generator()
+print(next(standing_values))
+print(next(standing_values))
+
+# This will cause StopIteration to occur
+print(next(standing_values))
