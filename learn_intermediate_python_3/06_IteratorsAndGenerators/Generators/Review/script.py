@@ -25,3 +25,16 @@ for day in grad_days:
   print("Days Left: {}".format(day))
 
 gpas = [3.2, 4.0, 3.6, 2.9]
+
+def honors_generator(gpas):
+  for gpa in gpas:
+    if gpa > 3.9:
+      yield from summa()
+    elif gpa > 3.7:
+      yield from magna()
+    elif gpa > 3.5:
+      yield from cum_laude()
+
+honors = honors_generator(gpas)
+for honor_label in honors:
+  print(honor_label)
