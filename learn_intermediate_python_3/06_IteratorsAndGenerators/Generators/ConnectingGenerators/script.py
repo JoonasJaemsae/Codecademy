@@ -11,3 +11,7 @@ def combined_students():
   yield from science_students(5)
   yield from non_science_students(10, 15)
   yield from non_science_students(25, 30)
+
+student_generator = combined_students()
+for student_id in student_generator:
+  print(student_id)
